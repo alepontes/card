@@ -23,7 +23,6 @@ const data = {
   github: chalk.gray('https://github.com/') + chalk.green('alepontes'),
   linkedin: chalk.gray('https://linkedin.com/in/') + chalk.blue('alexandre-pontes'),
   web: chalk.cyan('http://alepontes.dev/'),
-  npx: chalk.red('npx') + ' ' + chalk.white('@alepontes/card  (via GitHub Package Registry)'),
   labelWork: chalk.white.bold('       Work:'),
   labelOpenSource: chalk.white.bold('Open Source:'),
   labelTwitter: chalk.white.bold('    Twitter:'),
@@ -43,7 +42,6 @@ const npming = `${data.labelnpm}  ${data.npm}`
 const githubing = `${data.labelGitHub}  ${data.github}`
 const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`
 const webing = `${data.labelWeb}  ${data.web}`
-const carding = `${data.labelCard}  ${data.npx}`
 
 // Put all our output together into a single variable so we can use boxen effectively
 const output = heading + // data.name + data.handle
@@ -53,7 +51,6 @@ const output = heading + // data.name + data.handle
                npming + newline + // data.labelnpm + data.npm
                githubing + newline + // data.labelGitHub + data.github
                linkedining + newline + // data.labelLinkedIn + data.linkedin
-               webing + newline + newline + // data.labelWeb + data.web
-               carding // data.labelCard + data.npx
+               webing + newline + newline // data.labelWeb + data.web
 
 fs.writeFileSync(path.join(__dirname, 'bin/output'), chalk.green(boxen(output, options)))

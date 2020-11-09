@@ -1,6 +1,6 @@
 {
   "name": "alepontes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A personal card for Ale Pontes (@alepontes)",
   "main": "/bin/card.js",
   "bin": {
